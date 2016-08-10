@@ -1,0 +1,18 @@
+{
+  "name": "bootstrap-gulp-sass-workflow",
+  "version": "0.1.0",
+  "description": "Frontend Workflow using Bootstrap 3, Gulp and SASS",
+  "author": "Eric Angeles",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-uglify": "^2.0.0"
+  }
+}
