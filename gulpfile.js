@@ -17,9 +17,9 @@ var config = {
 }
 
 /* ---- Task for running bower ---- */
-gulp.task('bower', function() { 
+gulp.task('bower', function() {
   return bower()
-  .pipe(gulp.dest(config.bowerDir)) 
+  .pipe(gulp.dest(config.bowerDir))
 });
 
 /* ---- Concatenate and Minify JS ---- */
@@ -34,13 +34,13 @@ gulp.task('scripts', function() {
 });
 
 /* ---- Font Awesome Directory ---- */
-gulp.task('icons', function() { 
-  return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
-  .pipe(gulp.dest('./dist/resource/fonts')); 
+gulp.task('icons', function() {
+  return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*')
+  .pipe(gulp.dest('./dist/resource/fonts'));
 });
 
 /* ---- Compressed, Reload and Convert SCSS to CSS, create source map  ---- */
-gulp.task('css', function() { 
+gulp.task('css', function() {
   return gulp.src('./src/sass/style.scss')
   .pipe(sass({
     style: 'compressed',
@@ -49,10 +49,10 @@ gulp.task('css', function() { 
       config.bowerDir + '/bootstrap-sass/assets/stylesheets',
       config.bowerDir + '/font-awesome/scss',
     ]
-  }) 
+  })
   .on("error", notify.onError(function (error) {
     return "Error: " + error.message;
-  }))) 
+  })))
   .pipe(cleanCSS())
   .pipe(gulp.dest('./dist/resource/css'))
   .pipe(browserSync.stream());
